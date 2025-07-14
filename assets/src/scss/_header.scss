@@ -1,0 +1,280 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.hd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: transparent;
+  transition: background-color $trans;
+  font-family: var(--font-sans);
+  font-weight: 500;
+
+  @include mq() {
+    background-color: transparent !important;
+
+    &.is-scrolled {
+      background-color: $key-yellow !important;
+    }
+  }
+
+  &.is-open {
+    background-color: $key-yellow;
+  }
+
+  &.is-scrolled {
+    background-color: $key-yellow;
+  }
+
+  &-in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+
+    @include mq() {
+      height: 98px;
+    }
+  }
+
+  &-logo {
+    width: 145px;
+
+    @include mq() {
+      width: 180px;
+    }
+
+    @include mq(ll) {
+      width: 224px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-ham {
+    display: block;
+    border: 0;
+    background: transparent;
+    width: 24px;
+    height: 14px;
+    position: relative;
+
+    @include mq() {
+      display: none;
+    }
+
+    &-line {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: $white;
+      left: 0;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: calc(50% - 0.5px);
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+      }
+    }
+  }
+
+  &-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: $key-yellow;
+    color: $white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $trans, visibility $trans;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @include mq() {
+      opacity: 1 !important;
+      visibility: visible !important;
+      position: static;
+      width: auto;
+      background: transparent;
+      margin-left: auto;
+    }
+
+    &-item {
+      opacity: 0;
+
+      @include mq() {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      padding: 48px 20px;
+      gap: 15px;
+
+      @include mq() {
+        flex-direction: row;
+        gap: 20px;
+        padding: 0;
+      }
+
+      @include mq(ll) {
+        gap: 48px;
+      }
+    }
+
+    &-link {
+      color: $white;
+      text-decoration: none;
+      @include fs(20);
+
+      @include mq() {
+        @include fs(16);
+      }
+
+      @include mq(ll) {
+        @include fs(20);
+      }
+    }
+  }
+
+  &-btn {
+    position: fixed;
+    bottom: 16px;
+    right: 20px;
+
+    @include mq() {
+      position: static;
+      margin-left: 20px;
+    }
+
+    @include mq(ll) {
+      margin-left: 44px;
+    }
+
+    &-link {
+      color: $white;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        .hd-btn {
+          &-sp,
+          &-pc {
+            background: $white;
+            color: $navy;
+          }
+
+          &-icon {
+            background-image: url("../../img/common/icon-cart-nv.svg");
+          }
+
+          &-pc::before {
+            background-image: url("../../img/common/icon-btn-arrow-nv.svg");
+          }
+        }
+      }
+    }
+
+    &-icon {
+      width: 28px;
+      height: 28px;
+      background-image: url("../../img/common/icon-cart-wt.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background-image $trans;
+    }
+
+    &-txt {
+      @include fs(13);
+
+      @include mq() {
+        @include fs(14);
+        transform: translateX(-0.5em);
+      }
+
+      @include mq(ll) {
+        @include fs(16);
+      }
+    }
+
+    &-sp {
+      width: 80px;
+      height: 80px;
+      background: $navy;
+      color: $white;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $navy;
+      transition: background-color $trans, color $trans;
+
+      @include mq() {
+        display: none;
+      }
+    }
+
+    &-pc {
+      display: none;
+
+      @include mq() {
+        display: flex;
+        width: 200px;
+        height: 46px;
+        background: $navy;
+        color: $white;
+        border: 1px solid $navy;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        transition: background-color $trans, color $trans;
+        font-family: var(--font-sans);
+        font-weight: 500;
+        position: relative;
+      }
+
+      @include mq(ll) {
+        width: 320px;
+        height: 56px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 18px;
+        width: 12px;
+        height: 24px;
+        background-image: url("../../img/common/icon-btn-arrow-wt.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translateY(-50%);
+        transition: background-image $trans;
+
+        @include mq(ll) {
+          right: 28px;
+        }
+      }
+    }
+  }
+}

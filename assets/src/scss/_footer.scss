@@ -1,0 +1,88 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.ft {
+  padding-top: 64px;
+  padding-bottom: 25px;
+
+  @include mq() {
+    padding-bottom: 70px;
+  }
+
+  &-top {
+    display: flex;
+    flex-direction: column;
+
+    @include mq() {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &-logo {
+    width: 145px;
+
+    @include mq() {
+      width: 224px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-nav {
+    font-family: var(--font-rhd);
+    font-weight: 300;
+    @include fs(20);
+    @include ls(150);
+    margin-top: 35px;
+
+    @include mq() {
+      margin-top: 0;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      @include mq() {
+        flex-direction: row;
+        gap: 60px;
+      }
+
+      @include mq(ll) {
+        gap: 100px;
+      }
+    }
+
+    &-link {
+      color: $black;
+      text-decoration: none;
+      text-underline-offset: 2px;
+    }
+  }
+
+  &-bottom {
+    margin-top: 280px;
+
+    @include mq() {
+      margin-top: 70px;
+    }
+  }
+
+  &-copyright {
+    text-align: center;
+    font-family: var(--font-rhd);
+    font-weight: 300;
+    @include fs(20);
+    @include ls(150);
+
+    small {
+      font-size: inherit;
+    }
+  }
+}

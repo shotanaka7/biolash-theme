@@ -1,0 +1,97 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.faq {
+  background: $key-yellow;
+  color: $white;
+  padding-bottom: 88px;
+
+  @include mq() {
+    padding-bottom: 96px;
+  }
+
+  .sec-ttl {
+    color: $white;
+  }
+
+  &-list {
+    margin-top: 68px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+
+    @include mq() {
+      margin-top: 100px;
+      gap: 60px;
+    }
+  }
+
+  &-ques {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid $white;
+    padding: 0;
+    padding-bottom: 8px;
+    text-align: left;
+    position: relative;
+    line-height: 2;
+
+    &.is-open {
+      .faq-ques-icon {
+        transform: translateY(-50%) rotate(45deg);
+      }
+    }
+
+    &-icon {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transform-origin: center;
+      transition: transform $trans;
+
+      @include mq() {
+        width: 28px;
+        height: 28px;
+        right: 16px;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $white;
+        transform-origin: center;
+        transition: transform $trans;
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &-ans {
+    &-in {
+      @include fs(16);
+      padding-top: 16px;
+
+      @include mq() {
+        padding-top: 32px;
+      }
+
+      p + p {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

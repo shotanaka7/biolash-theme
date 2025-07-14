@@ -27,24 +27,42 @@ if ( is_home() || is_front_page() ) {
     <div class="in-lg hd-in">
       <div class="hd-logo">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="hd-logo-link">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Biolash Logo" class="hd-logo-img">
+          <img src="<?php imgDir(); ?>/common/logo-wt.svg" alt="Bio Lash" class="ft-logo-img" width="224" height="40">
         </a>
       </div>
-      <div class="hd-nav">
-        <nav class="hd-nav-list">
-          <ul>
-            <li>
-              <a href="<?php echo $url_base; ?>#biolash">ビオラッシュ</a>
-            </li>
-            <li>
-              <a href="<?php echo $url_base; ?>#features">製品特徴</a>
-            </li>
-            <li>
-              <a href="<?php echo $url_base; ?>#how-to-use">使い方</a>
-            </li>
-          </ul>
-        </nav>
+      <button class="hd-ham">
+        <span class="hd-ham-line"></span>
+        <span class="hd-ham-line"></span>
+        <span class="hd-ham-line"></span>
+      </button>
+      <nav class="hd-nav">
+        <ul class="hd-nav-list">
+          <li class="hd-nav-item">
+            <a href="<?php echo $url_base; ?>#biolash" class="hd-nav-link">ビオラッシュ</a>
+          </li>
+          <li class="hd-nav-item">
+            <a href="<?php echo $url_base; ?>#feature" class="hd-nav-link">製品特徴</a>
+          </li>
+          <li class="hd-nav-item">
+            <a href="<?php echo $url_base; ?>#how-to-use" class="hd-nav-link">使い方</a>
+          </li>
+        </ul>
+      </nav>
+      <?php
+		if ( is_home() || is_front_page() ) :
+			?>
+      <div class="hd-btn">
+        <a href="" class="hd-btn-link">
+          <span class="hd-btn-pc">
+            <span class="hd-btn-txt">Amazonで購入する</span>
+          </span>
+          <span class="hd-btn-sp">
+            <span class="hd-btn-icon"></span>
+            <span class="hd-btn-txt">購入する</span>
+          </span>
+        </a>
       </div>
+      <?php endif; ?>
     </div>
   </header>
   <main class="main">

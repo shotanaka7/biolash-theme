@@ -1,0 +1,25 @@
+@use "reset" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+// utils
+@use "utils" as *;
+
+// header
+@use "header" as *;
+
+// footer
+@use "footer" as *;
+
+// page
+@use "page" as *;
+
+// home
+@use "home/kv" as *;
+@use "home/bl" as *;
+@use "home/feature" as *;
+@use "home/free" as *;
+@use "home/howto" as *;
+@use "home/faq" as *;
+@use "home/outro" as *;
+@use "home/instagram" as *;

@@ -1,0 +1,210 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+body {
+  line-height: 1.5;
+  font-family: var(--font-sawarabi);
+  --webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  min-width: 320px;
+}
+
+.rhd {
+  font-family: var(--font-rhd);
+}
+
+strong {
+  font-weight: 700;
+}
+
+br {
+  &.sp-block,
+  &.pc-none {
+    display: inline-block;
+
+    @include mq() {
+      display: none;
+    }
+  }
+
+  &.sp-none,
+  &.pc-block {
+    display: none;
+
+    @include mq() {
+      display: inline-block;
+    }
+  }
+}
+
+.in {
+  &-lg {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include mq() {
+      padding: 0 40px;
+    }
+
+    @include mq(ll) {
+      padding: 0 80px;
+    }
+  }
+}
+
+.txt {
+  @include fs(16);
+
+  @include mq() {
+    @include fs(20);
+  }
+}
+
+.btn {
+  &-link {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    @include fs(16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    background-color: $navy;
+    color: $white;
+    position: relative;
+    border-radius: 100px;
+    border: 1px solid $navy;
+    transition: background-color $trans, color $trans;
+
+    &:hover,
+    &:focus-visible {
+      background-color: transparent;
+      color: $navy;
+
+      &::before {
+        background-image: url("../../img/common/icon-btn-arrow-nv.svg");
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 28px;
+      width: 12px;
+      height: 24px;
+      background-image: url("../../img/common/icon-btn-arrow-wt.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: translateY(-50%);
+      transition: background-image $trans;
+    }
+  }
+}
+
+.hov {
+  &-fade {
+    opacity: 1;
+    transition: opacity $trans;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.6;
+    }
+  }
+}
+
+.sec {
+  padding-top: 88px;
+
+  @include mq() {
+    padding-top: 96px;
+  }
+
+  &-ttl {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: $key-yellow;
+
+    &-en {
+      @include fs(48);
+      @include ls(-20);
+      font-weight: 300;
+      text-transform: uppercase;
+      font-family: var(--font-rhd);
+
+      @include mq(s) {
+        @include fs(56);
+      }
+
+      @include mq() {
+        @include fs(128);
+      }
+    }
+
+    &-ja {
+      margin-top: 16px;
+      @include fs(20);
+      @include ls(60);
+      font-weight: 400;
+
+      @include mq(s) {
+        @include fs(24);
+      }
+
+      @include mq() {
+        @include fs(32);
+        @include ls(160);
+      }
+    }
+  }
+}
+
+.check {
+  &-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include mq() {
+      gap: 24px;
+    }
+
+    @include mq(ll) {
+      gap: 42px;
+    }
+  }
+
+  &-item {
+    padding-left: 50px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 25px;
+      height: 25px;
+      background-image: url("../../img/common/icon-check.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translateY(-50%);
+
+      @include mq() {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

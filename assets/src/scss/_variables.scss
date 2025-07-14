@@ -1,0 +1,23 @@
+$spWidth: 393;
+$pcWidth: 1440;
+
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Red+Hat+Display:wght@300..900&family=Sawarabi+Gothic&display=swap");
+
+:root {
+  --font-rhd: "Red Hat Display", sans-serif;
+  --font-sawarabi: "Sawarabi Gothic", sans-serif;
+  --font-sans: "Noto Sans JP", sans-serif;
+  --font-serif: "Noto Serif JP", serif;
+}
+
+// colors
+$white: #fff;
+$black: #000;
+$navy: #3a4f63;
+$key-yellow: #e4bd3b;
+
+// transitions
+$trans-time: 0.3s;
+$trans-ease: ease;
+$trans: $trans-time $trans-ease;

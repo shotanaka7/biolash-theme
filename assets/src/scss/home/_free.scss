@@ -1,0 +1,131 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.free {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px 10px;
+    list-style: none;
+    justify-content: center;
+    max-width: 930px;
+    margin: 0 auto;
+    margin-top: 36px;
+
+    @include mq() {
+      gap: 42px 32px;
+      margin-top: 60px;
+    }
+
+    @include mq(ll) {
+      gap: 62px 32px;
+    }
+
+    &-item {
+      flex: 0 0 auto;
+      width: calc((100% - 38px) / 2);
+      aspect-ratio: 186 / 191;
+      background-image: url("../../img/home/free-icon-bg.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $key-yellow;
+      @include fs(16);
+      text-align: center;
+
+      @include mq(sl) {
+        @include fs(20);
+      }
+
+      @include mq() {
+        @include fs(18);
+        width: calc((100% - 42px * 3) / 4);
+      }
+
+      @include mq(ll) {
+        @include fs(20);
+        width: calc((100% - 62px * 3) / 4);
+      }
+    }
+  }
+
+  &-2col {
+    display: flex;
+    flex-direction: column;
+    margin-top: 88px;
+
+    @include mq() {
+      flex-direction: row;
+      align-items: center;
+      gap: 35px;
+      margin-top: 96px;
+    }
+
+    @include mq(ll) {
+      gap: 75px;
+    }
+
+    &-img {
+      margin-bottom: 32px;
+
+      @include mq() {
+        flex: 0 0 auto;
+        width: calc(534 / 1280 * 100%);
+        margin-bottom: 0;
+      }
+
+      .free-2col-ttl {
+        display: block;
+
+        @include mq() {
+          display: none;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &-cont {
+      .free-2col-ttl {
+        display: none;
+
+        @include mq() {
+          display: block;
+        }
+      }
+    }
+
+    &-ttl {
+      color: $key-yellow;
+      @include fs(24);
+      @include ls(150);
+      text-align: center;
+      margin-bottom: 32px;
+
+      @include mq() {
+        @include fs(28);
+        text-align: left;
+        margin-bottom: 24px;
+      }
+
+      @include mq(ll) {
+        @include fs(40);
+      }
+    }
+
+    &-txt {
+      color: $key-yellow;
+
+      + .free-2col-txt {
+        margin-top: 1em;
+      }
+    }
+  }
+}

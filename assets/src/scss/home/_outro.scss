@@ -1,0 +1,25 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.outro {
+  background: $key-yellow;
+  color: $white;
+  padding-bottom: 88px;
+
+  @include mq() {
+    padding-bottom: 96px;
+  }
+
+  &-kv {
+    padding: 0 20px;
+
+    @include mq() {
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

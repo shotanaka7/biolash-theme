@@ -8,19 +8,27 @@
   <div class="in-lg">
     <div class="ft-top">
       <div class="ft-logo">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="ft-logo-link">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Biolash Logo" class="ft-logo-img">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="ft-logo-link hov-fade">
+          <img src="<?php imgDir(); ?>/common/logo-bk.svg" alt="Bio Lash" class="ft-logo-img" width="224" height="40">
         </a>
       </div>
-      <div class="ft-nav">
-        <nav class="ft-nav-list">
-          <ul>
-            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
-            <li><a href="<?php echo esc_url( home_url( '/about' ) ); ?>">About</a></li>
-            <li><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="ft-nav">
+        <ul class="ft-nav-list">
+          <li class="ft-nav-item">
+            <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="ft-nav-link hov-fade">CONTACT</a>
+          </li>
+          <li class="ft-nav-item">
+            <a href="<?php echo esc_url( home_url( '/company/' ) ); ?>" class="ft-nav-link hov-fade">COMPANY</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="ft-bottom">
+      <p class="ft-copyright">
+        <small>&copy; 2025 Bio Lash</small>
+      </p>
     </div>
   </div>
 </footer>
+<?php
+wp_footer();

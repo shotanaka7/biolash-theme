@@ -1,0 +1,240 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.bl {
+  background-color: $key-yellow;
+  position: relative;
+  color: $white;
+
+  &-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // @include vww(278);
+    // transform: translateY(calc(158 / 278 * -100%));
+    width: 278px;
+    transform: translateY(-158px);
+
+    @include mq(sm) {
+      width: calc(278px * 1.2);
+      transform: translateY(calc(-158px * 1.2));
+    }
+
+    @include mq() {
+      width: calc(278px * 1.5);
+      transform: translateY(calc(-158px * 1.5));
+    }
+
+    @include mq(ll) {
+      width: calc(759px * 0.8);
+      transform: translateY(-185px);
+      left: auto;
+      right: 0;
+    }
+
+    @include mq(xl) {
+      width: 759px;
+      transform: translateY(-350px);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-in {
+    padding-top: 90px;
+    padding-bottom: 80px;
+
+    @include mq() {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    @include mq(xl) {
+      position: relative;
+    }
+  }
+
+  &-lead {
+    position: relative;
+
+    @include mq(ll) {
+      width: 60%;
+    }
+
+    &-img {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-ttl {
+      @include fs(20);
+      @include ls(100);
+      font-weight: 700;
+
+      @include mq() {
+        @include ls(150);
+        @include fs(32);
+      }
+
+      @include mq(xl) {
+        @include fs(40);
+      }
+
+      br.ss {
+        display: inline-block;
+
+        @include mq(sm) {
+          display: none;
+        }
+      }
+    }
+
+    &-txt {
+      margin-top: 25px;
+
+      @include mq() {
+        margin-top: 10px;
+      }
+    }
+
+    &-img {
+      margin-top: 30px;
+      max-width: 565px;
+
+      @include mq() {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &-product {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+
+    @include mq() {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 96px;
+    }
+
+    &-img {
+      @include mq() {
+        flex: 0 1 auto;
+        width: calc(714 / 1440 * 100%);
+      }
+
+      @include mq(xl) {
+        width: 714px;
+        flex: 0 0 auto;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-cont {
+      @include mq() {
+        flex: 1 0 auto;
+        padding-left: 30px;
+      }
+    }
+
+    &-tagline {
+      margin-top: 48px;
+      @include fs(16);
+
+      @include mq() {
+        margin-top: 0;
+        @include fs(20);
+      }
+    }
+
+    &-ttl {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+
+      @include mq(ll) {
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      &-main {
+        @include fs(40);
+        @include ls(150);
+      }
+
+      &-sub {
+        @include fs(16);
+        font-family: var(--font-rhd);
+        @include ls(150);
+        font-weight: 400;
+
+        @include mq(ll) {
+          margin-left: 1em;
+        }
+      }
+
+      &-ja {
+        margin-top: 8px;
+        @include fs(16);
+
+        @include mq() {
+          @include ls(150);
+        }
+
+        @include mq(ll) {
+          margin-top: 4px;
+        }
+      }
+    }
+
+    &-price {
+      margin-top: 16px;
+
+      &-num {
+        font-family: var(--font-rhd);
+        @include fs(20);
+        font-weight: 500;
+
+        @include mq() {
+          @include fs(32);
+        }
+      }
+
+      &-txt {
+        @include fs(16);
+
+        @include mq() {
+          @include fs(20);
+        }
+      }
+    }
+
+    &-info {
+      @include fs(16);
+
+      @include mq() {
+        @include fs(20);
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 40px;
+
+    @include mq() {
+      margin-top: 70px;
+    }
+  }
+}

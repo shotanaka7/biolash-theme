@@ -1,0 +1,203 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.btn-link {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  @include fs(16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  background-color: $navy;
+  color: $white;
+  position: relative;
+  border-radius: 100px;
+  border: 1px solid $navy;
+  transition: background-color $trans, color $trans;
+
+  &:hover,
+  &:focus-visible {
+    background-color: transparent;
+    color: $navy;
+  }
+}
+
+.page {
+  &-body {
+    background: $key-yellow;
+    color: $white;
+    padding-top: 50px;
+    padding-bottom: 88px;
+
+    @include mq() {
+      padding-top: 98px;
+      padding-bottom: 96px;
+    }
+
+    .sec-ttl {
+      color: $white;
+      padding-top: 88px;
+
+      @include mq() {
+        padding-top: 40px;
+      }
+    }
+  }
+
+  &-cont {
+    padding-top: 88px;
+
+    @include mq() {
+      padding-top: 160px;
+    }
+
+    // wp style
+    .wp-block-table {
+      .has-fixed-layout {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: inherit;
+      }
+
+      th,
+      td {
+        @include fs(16);
+        padding: 32px 8px;
+        vertical-align: middle;
+
+        @include mq() {
+          @include fs(20);
+          padding: 6px 16px;
+          height: 124px;
+        }
+
+        &:nth-child(1) {
+          width: calc(96 / 353 * 100%);
+
+          @include mq() {
+            width: calc(390 / 1280 * 100%);
+          }
+        }
+
+        br {
+          display: inline-block;
+
+          @include mq() {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .wpcf7 {
+      max-width: 626px;
+      margin: 0 auto;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include mq() {
+          flex-direction: row;
+          gap: 32px;
+        }
+
+        input {
+          height: 42px;
+          padding: 0 16px;
+          box-sizing: border-box;
+        }
+
+        textarea {
+          height: 160px;
+          resize: vertical;
+          padding: 8px 16px;
+
+          @include mq() {
+            height: 160px;
+          }
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          display: block;
+          border-radius: 8px;
+          border: 0;
+          box-sizing: border-box;
+          color: $black;
+          background-color: $white;
+
+          &:focus {
+            outline: 1px solid $white;
+            outline-offset: 3px;
+          }
+        }
+
+        label {
+          margin-bottom: 8px;
+          display: inline-block;
+          @include fs(16);
+
+          @include mq() {
+            @include fs(20);
+          }
+        }
+
+        .form-half {
+          flex: 0 0 auto;
+
+          @include mq() {
+            width: calc((100% - 32px) / 2);
+          }
+        }
+
+        .form-full {
+          width: 100%;
+          flex: 1 1 auto;
+        }
+      }
+
+      .form-send {
+        @extend .btn-link;
+      }
+    }
+
+    .wpcf7 form.invalid .wpcf7-response-output,
+    .wpcf7 form.unaccepted .wpcf7-response-output,
+    .wpcf7 form.payment-required .wpcf7-response-output {
+      border-color: #dc3232;
+      color: #dc3232;
+    }
+
+    .wpcf7 form.sent .wpcf7-response-output,
+    .wpcf7 form .wpcf7-response-output {
+      padding: 24px 16px;
+      border-color: $white;
+      margin-top: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      text-underline-offset: 2px;
+      font-size: inherit;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+      }
+    }
+  }
+}
