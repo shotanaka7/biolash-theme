@@ -1,6 +1,14 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
+body.home {
+  .hd {
+    transform: translateY(-100%);
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+}
+
 .hd {
   position: fixed;
   top: 0;

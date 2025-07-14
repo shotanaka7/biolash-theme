@@ -121,6 +121,22 @@ br {
   }
 }
 
+.mask-img {
+  mask-image: linear-gradient(135deg, #fff 30%, hsla(0, 0%, 100%, 0.5) 45%, hsla(0, 0%, 100%, 0) 55%, hsla(0, 0%, 100%, 0));
+  mask-position: 150% 150%;
+  mask-repeat: no-repeat;
+  mask-size: 300% 300%;
+  transition: 2s cubic-bezier(0.26, 0.06, 0, 1) 0.2s;
+
+  &.is-visible {
+    mask-position: 0 0;
+  }
+
+  &.is-fast {
+    transition: 2s cubic-bezier(0.26, 0.06, 0, 1);
+  }
+}
+
 .sec {
   padding-top: 88px;
 

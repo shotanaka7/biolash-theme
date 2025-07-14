@@ -59,6 +59,7 @@
 
   &-lead {
     position: relative;
+    opacity: 0;
 
     @include mq(ll) {
       width: 60%;

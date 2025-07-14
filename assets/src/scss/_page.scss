@@ -27,6 +27,12 @@
 }
 
 .page {
+  &-ttl-en,
+  &-ttl-ja {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
   &-body {
     background: $key-yellow;
     color: $white;

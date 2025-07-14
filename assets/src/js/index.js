@@ -257,9 +257,122 @@ const accordionToggle = () => {
   });
 }
 
+// gsap animation
+const gsapAnimation = () => {
+  // mask-img
+  const maskImgs = document.querySelectorAll('.mask-img');
+  maskImgs.forEach(maskImg => {
+    if (maskImg.classList.contains('is-fast')) {
+      return; // is-fastクラスがある場合はアニメーションをスキップ
+    }
+    ScrollTrigger.create({
+      trigger: maskImg,
+      start: 'top bottom',
+      toggleClass: 'is-visible',
+      once: true,
+    });
+  });
+
+  // fade-in
+  const fadeIns = document.querySelectorAll('.fadein-wrap');
+  fadeIns.forEach(fadeIn => {
+    const fadeInItems = fadeIn.querySelectorAll('.fadein-item');
+    gsap.set(fadeInItems, { opacity: 0, y: 30 }); // 初期状態を設定
+    gsap.to(fadeInItems, {
+      scrollTrigger: {
+        trigger: fadeIn,
+        start: 'top 80%',
+        once: true,
+      },
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      delay: 0.2,
+      ease: 'power2.out',
+      stagger: 0.05,
+    });
+  });
+
+  // bodyにhomeクラスがある場合
+  const body = document.body;
+  const hd = document.querySelector('.hd');
+  if (body.classList.contains('home')) {
+    console.log('Home page detected');
+    const tl = gsap.timeline();
+    // 初期値
+    gsap.set('.kv-ttl', {
+      y: 30,
+      opacity: 0,
+    })
+    gsap.set('.kv-sub', {
+      y: 30,
+      opacity: 0,
+    });
+
+    // アニメーション
+    tl.to('.kv-bg', {
+      duration: 1,
+      onStart: () => {
+        document.querySelector('.kv-bg')?.classList.add('is-visible');
+      }
+    });
+    tl.to(hd, {
+      y: 0,
+      opacity: 1,
+      duration: 0.5,
+      ease: 'power2.out',
+      onStart: () => {
+        document.querySelector('.bl-img')?.classList.add('is-visible');
+      }
+    });
+    tl.to('.kv-ttl', {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: 'power2.out',
+    }, '-=0.4');
+    tl.to('.kv-sub', {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: 'power2.out',
+    }, '-=0.5');
+    tl.to('.bl-lead', {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: 'power2.out',
+      onStart: () => {
+        document.querySelector('.bl-lead')?.classList.add('is-visible');
+      }
+    });
+  } else {
+    const tl = gsap.timeline();
+    const h1En = document.querySelector('.page-ttl-en');
+    const h1Ja = document.querySelector('.page-ttl-ja');
+    const pageCont = document.querySelector('.page-cont');
+    gsap.to(pageCont, {
+      toggleClass: 'is-visible',
+    });
+    tl.to(h1En, {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: 'power2.out',
+    });
+    tl.to(h1Ja, {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: 'power2.out',
+    }, '-=0.4');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   menuToggle();
   emblaInit();
   accordionToggle();
   hashChange();
+  gsapAnimation();
 });
