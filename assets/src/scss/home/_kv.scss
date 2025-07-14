@@ -2,11 +2,12 @@
 @use "../mixins" as *;
 
 .kv {
-  height: 60vh;
-  min-height: 300px;
+  height: 55vh;
+  min-height: 250px;
   position: relative;
 
   @include mq() {
+    min-height: 300px;
     height: 66vh;
   }
 
