@@ -126,7 +126,7 @@ br {
   mask-position: 150% 150%;
   mask-repeat: no-repeat;
   mask-size: 300% 300%;
-  transition: 2s cubic-bezier(0.26, 0.06, 0, 1) 0.2s;
+  transition: 1.8s cubic-bezier(0.26, 0.06, 0, 1) 0.2s;
 
   &.is-visible {
     mask-position: 0 0;
