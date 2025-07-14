@@ -19,6 +19,19 @@ strong {
   font-weight: 700;
 }
 
+.qs {
+  margin-left: -0.4em;
+  margin-right: 0.05em;
+  width: 1em;
+  display: inline-block;
+}
+
+.qe {
+  width: 0.6em;
+  margin-left: -0.1em;
+  display: inline-block;
+}
+
 br {
   &.sp-block,
   &.pc-none {
@@ -73,7 +86,6 @@ br {
     justify-content: center;
     text-decoration: none;
     width: 100%;
-    max-width: 320px;
     padding: 16px 24px;
     box-sizing: border-box;
     background-color: $navy;
@@ -82,6 +94,10 @@ br {
     border-radius: 100px;
     border: 1px solid $navy;
     transition: background-color $trans, color $trans;
+
+    @include mq(sl) {
+      max-width: 320px;
+    }
 
     &:hover,
     &:focus-visible {
@@ -177,6 +193,7 @@ br {
       }
 
       @include mq() {
+        margin-top: 0;
         @include fs(32);
         @include ls(160);
       }
@@ -189,14 +206,15 @@ br {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
 
     @include mq() {
-      gap: 24px;
+      gap: 36px;
     }
 
     @include mq(ll) {
-      gap: 42px;
+      margin-top: 10px;
+      gap: 48px;
     }
   }
 

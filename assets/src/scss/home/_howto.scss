@@ -4,9 +4,9 @@
 .howto {
   background: $key-yellow;
   color: $white;
-  padding-top: 88px;
-  --slide-size: calc(206 / 353 * 100%);
-  --slide-spacing: 16px;
+  padding-top: 136px;
+  --slide-size: calc(216 / 353 * 100%);
+  --slide-spacing: 20px;
   margin-top: 88px;
 
   @include mq() {
@@ -30,6 +30,7 @@
       padding-left: 40px;
       padding-right: 40px;
       background: none;
+      margin-top: 42px;
     }
 
     @include mq(ll) {
@@ -172,6 +173,7 @@
       background: $white;
       color: $black;
       padding: 60px 20px 36px;
+      margin-top: 26px;
     }
 
     @include mq(ll) {

@@ -43,7 +43,7 @@
 
   &-ttl {
     @include fs(28);
-    @include ls(60);
+    @include ls(100);
 
     @include mq(ss) {
       @include fs(30);
@@ -55,7 +55,7 @@
 
     @include mq() {
       @include fs(48);
-      @include ls(160);
+      @include ls(140);
     }
 
     @include mq(ll) {
@@ -65,8 +65,7 @@
 
   &-sub {
     @include fs(14);
-    @include ls(280);
-    margin-left: -0.5em;
+    @include ls(350);
 
     @include mq(ss) {
       @include fs(15);
@@ -78,7 +77,7 @@
 
     @include mq() {
       @include fs(26);
-      @include ls(500);
+      @include ls(610);
       margin-top: 15px;
     }
 

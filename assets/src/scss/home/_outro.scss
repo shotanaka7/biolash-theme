@@ -12,9 +12,11 @@
 
   &-kv {
     padding: 0 20px;
+    margin-bottom: 76px;
 
     @include mq() {
       padding: 0;
+      margin-bottom: 0;
     }
 
     img {

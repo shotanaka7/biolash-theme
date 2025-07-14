@@ -5,20 +5,22 @@
   &-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 38px 10px;
+    gap: 10px 38px;
     list-style: none;
     justify-content: center;
     max-width: 930px;
+    width: 84%;
     margin: 0 auto;
     margin-top: 36px;
 
     @include mq() {
-      gap: 42px 32px;
+      gap: 32px 42px;
       margin-top: 60px;
+      width: 100%;
     }
 
     @include mq(ll) {
-      gap: 62px 32px;
+      gap: 32px 62px;
     }
 
     &-item {
@@ -124,7 +126,7 @@
       color: $key-yellow;
 
       + .free-2col-txt {
-        margin-top: 1em;
+        margin-top: 1.3em;
       }
     }
   }

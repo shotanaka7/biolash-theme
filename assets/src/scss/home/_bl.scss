@@ -80,7 +80,7 @@
       font-weight: 700;
 
       @include mq() {
-        @include ls(150);
+        @include ls(140);
         @include fs(32);
       }
 
@@ -91,7 +91,7 @@
       br.ss {
         display: inline-block;
 
-        @include mq(sm) {
+        @include mq(ss) {
           display: none;
         }
       }
@@ -118,7 +118,7 @@
   &-product {
     display: flex;
     flex-direction: column;
-    margin-top: 64px;
+    margin-top: 80px;
 
     @include mq() {
       flex-direction: row;
@@ -147,6 +147,7 @@
       @include mq() {
         flex: 1 0 auto;
         padding-left: 30px;
+        margin-top: 20px;
       }
     }
 
@@ -168,6 +169,7 @@
       @include mq(ll) {
         flex-direction: row;
         align-items: baseline;
+        margin-top: 15px;
       }
 
       &-main {
@@ -202,6 +204,10 @@
 
     &-price {
       margin-top: 16px;
+
+      @include mq() {
+        margin-top: 24px;
+      }
 
       &-num {
         font-family: var(--font-rhd);

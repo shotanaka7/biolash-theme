@@ -14,7 +14,7 @@
 	</div>
 
 	<div class="bl-lead">
-		<h2 class="bl-lead-ttl">Wラッシュブースト処方で<br>年齢まつ毛に<br class="ss">”攻めのケア”を。</h2>
+		<h2 class="bl-lead-ttl">Wラッシュブースト処方で<br>年齢まつ毛に<br class="ss"><span class="qs">“</span>攻めのケア<span class="qe">”</span>を。</h2>
 		<p class="txt bl-lead-txt">年齢とともに変化したまつ毛に、ハリ・コシ・ボリュームを与え目元印象をUPさせる成分を惜しみなく配合。</p>
 		<div class="bl-lead-img">
 		<img src="<?php imgDir(); ?>/home/feature-icon.svg" alt="進化型ビオチン×補修型プロビタミン" width="565" height="227" loading="lazy">
