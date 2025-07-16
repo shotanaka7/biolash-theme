@@ -110,6 +110,7 @@
       @include ls(150);
       text-align: center;
       margin-bottom: 32px;
+      font-weight: 700;
 
       @include mq() {
         @include fs(28);

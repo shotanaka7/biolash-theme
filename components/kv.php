@@ -14,7 +14,7 @@
 	<div class="in-lg kv-in">
 	<div class="kv-content">
 		<h1 class="kv-ttl">35歳からの目元に。</h1>
-		<p class="kv-sub"><span class="qs">“</span>年齢まつ毛<span class="qe">”</span> 専用美容液、誕生。</p>
+		<p class="kv-sub">“年齢まつ毛<span class="qe">”</span> 専用美容液、誕生。</p>
 	</div>
 	</div>
 </div>

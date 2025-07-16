@@ -29,8 +29,8 @@
 		<div class="free-2col-cont">
 		<h3 class="free-2col-ttl fadein-item">色素沈着の可能性がある<br>"ビマトプロスト"不使用</h3>
 		<p class="txt free-2col-txt fadein-item">まつ毛美容液には、色素沈着の副作用が報告されている成分が含まれるものもあります。</p>
-		<p class="txt free-2col-txt fadein-item">BioLashは、色素沈着リスクが指摘される“ビマトプロスト”を一切使用していません。低刺激・無着色・無香料の処方で、デリケートな目元にも安心してお使いいただけます。</p>
-		<p class="txt free-2col-txt fadein-item">BioLashは、“毎日安心して続けられる”ことを大切にした処方設計です。</p>
+		<p class="txt free-2col-txt fadein-item"><strong>BioLashは、色素沈着リスクが指摘される“ビマトプロスト”を一切使用していません。</strong>低刺激・無着色・無香料の処方で、デリケートな目元にも安心してお使いいただけます。</p>
+		<p class="txt free-2col-txt fadein-item"><strong>BioLashは、“毎日安心して続けられる”ことを大切にした処方設計です。</strong></p>
 		</div>
 	</div>
 	</div>

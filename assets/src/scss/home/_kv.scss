@@ -2,7 +2,7 @@
 @use "../mixins" as *;
 
 .kv {
-  height: 60vh;
+  height: 88vh;
   min-height: 250px;
   position: relative;
 
@@ -34,7 +34,11 @@
   }
 
   &-content {
-    padding-bottom: 125px;
+    padding-bottom: 25vh;
+
+    @include mq() {
+      background-position: 125px;
+    }
 
     @include mq(ll) {
       padding-bottom: 96px;

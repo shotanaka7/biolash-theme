@@ -24,7 +24,7 @@
 		</ul>
 		</div>
 
-		<p class="fea-intro-last mask-img">だから<span class="qs">“</span>未来の目元を変える<span class="qe">”</span><br>攻めと守りのWケア成分を配合</p>
+		<p class="fea-intro-last mask-img">だから“未来の目元を変える<span class="qe">”</span><br>攻めと守りのWケア成分を配合</p>
 	</div>
 	<div class="fea-intro-arrow"></div>
 	</div>

@@ -105,6 +105,7 @@
       bottom: -80px;
       left: 0;
       width: 100%;
+      font-weight: 700;
 
       @include mq() {
         bottom: -220px;
@@ -354,6 +355,7 @@
 
       &-txt {
         color: $key-yellow;
+        font-weight: 700;
 
         @include mq() {
           @include fs(16);

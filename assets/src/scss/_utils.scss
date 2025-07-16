@@ -3,9 +3,9 @@
 
 body {
   line-height: 1.5;
-  font-family: var(--font-sawarabi);
-  --webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-jp);
+  // --webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-optical-sizing: auto;
   min-width: 320px;
@@ -19,16 +19,8 @@ strong {
   font-weight: 700;
 }
 
-.qs {
-  margin-left: -0.4em;
-  margin-right: 0.05em;
-  width: 1em;
-  display: inline-block;
-}
-
 .qe {
-  width: 0.6em;
-  margin-left: -0.1em;
+  width: 0.5em;
   display: inline-block;
 }
 
@@ -221,6 +213,7 @@ br {
   &-item {
     padding-left: 50px;
     position: relative;
+    font-weight: 700;
 
     &::before {
       content: "";

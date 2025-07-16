@@ -12,29 +12,39 @@
     left: 0;
     // @include vww(278);
     // transform: translateY(calc(158 / 278 * -100%));
-    width: 278px;
-    transform: translateY(-158px);
+    width: 279px;
+    transform: translateY(-65px);
+    background: none;
 
     @include mq(sm) {
-      width: calc(278px * 1.2);
-      transform: translateY(calc(-158px * 1.2));
+      width: calc(279px * 1.2);
+      transform: translateY(calc(-65px * 1.2));
     }
 
     @include mq() {
-      width: calc(278px * 1.5);
-      transform: translateY(calc(-158px * 1.5));
+      width: calc(279px * 1.5);
+      transform: translateY(calc(-65px * 1.5));
     }
 
     @include mq(ll) {
-      width: calc(759px * 0.8);
+      width: calc(364px * 0.8);
       transform: translateY(-185px);
       left: auto;
-      right: 0;
+      right: 81px;
     }
 
     @include mq(xl) {
-      width: 759px;
-      transform: translateY(-350px);
+      width: 364px;
+      transform: translateY(-289px);
+    }
+
+    &.multiply {
+      mix-blend-mode: multiply;
+      z-index: 1;
+    }
+
+    &.normal {
+      z-index: 2;
     }
 
     img {

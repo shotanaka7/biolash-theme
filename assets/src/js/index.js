@@ -322,7 +322,7 @@ const gsapAnimation = () => {
       duration: 0.5,
       ease: 'power2.out',
       onStart: () => {
-        document.querySelector('.bl-img')?.classList.add('is-visible');
+        document.querySelectorAll('.bl-img')?.forEach(img => img.classList.add('is-visible'));
       }
     });
     tl.to('.kv-ttl', {
