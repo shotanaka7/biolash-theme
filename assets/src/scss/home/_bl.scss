@@ -162,7 +162,7 @@
     }
 
     &-tagline {
-      margin-top: 48px;
+      margin-top: 24px;
       @include fs(16);
 
       @include mq() {
@@ -174,7 +174,6 @@
     &-ttl {
       display: flex;
       flex-direction: column;
-      margin-top: 10px;
 
       @include mq(ll) {
         flex-direction: row;
@@ -185,6 +184,11 @@
       &-main {
         @include fs(40);
         @include ls(150);
+        line-height: 1.1;
+
+        @include mq() {
+          line-height: 1.5;
+        }
       }
 
       &-sub {
@@ -192,28 +196,26 @@
         font-family: var(--font-rhd);
         @include ls(150);
         font-weight: 400;
+        margin-top: 8px;
 
         @include mq(ll) {
+          margin-top: 0;
           margin-left: 1em;
         }
       }
 
       &-ja {
-        margin-top: 8px;
+        margin-top: 4px;
         @include fs(16);
 
         @include mq() {
           @include ls(150);
         }
-
-        @include mq(ll) {
-          margin-top: 4px;
-        }
       }
     }
 
     &-price {
-      margin-top: 16px;
+      margin-top: 6px;
 
       @include mq() {
         margin-top: 24px;
@@ -248,7 +250,7 @@
   }
 
   .btn {
-    margin-top: 40px;
+    margin-top: 20px;
 
     @include mq() {
       margin-top: 70px;
