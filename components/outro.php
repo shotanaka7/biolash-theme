@@ -1,4 +1,4 @@
-<div class="outro">
+<div class="outro bg-yellow" data-hd-color>
 	<div class="outro-kv mask-img">
 	<picture>
 		<source srcset="<?php imgDir(); ?>/home/product-kv-lg.webp?v1.0.1" media="(min-width: 768px)" width="1442" height="791">

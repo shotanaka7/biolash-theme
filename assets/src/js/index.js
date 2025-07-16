@@ -86,19 +86,30 @@ const menuToggle = () => {
 
   // Scroll event to change header style
   const updateHeaderStyle = () => {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const kv = document.querySelector('.kv');
+    const sections = document.querySelectorAll('[data-hd-color]');
+    const scrollY = window.scrollY;
+    const vh = window.innerHeight;
 
-  if (kv) {
-    if (scrollTop > kv.offsetHeight - 50) {
-      hd.classList.add('is-scrolled');
+    let currentColor = null;
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      const top = rect.top + scrollY;
+      const bottom = top + rect.height;
+
+      // セクションが画面中央にかかってるか
+      if (scrollY >= top && scrollY < bottom) {
+        currentColor = section.classList.contains('bg-yellow') ? 'yellow' : 'default';
+      }
+    });
+
+    // 色に応じてクラスを切り替え
+    if (currentColor === 'yellow') {
+      hd.classList.remove('has-bg');
     } else {
-      hd.classList.remove('is-scrolled');
+      hd.classList.add('has-bg');
     }
-  } else {
-    hd.classList.add('is-scrolled');
-  }
-}
+  };
 
 window.addEventListener('load', updateHeaderStyle);
 window.addEventListener('scroll', updateHeaderStyle);

@@ -3,7 +3,7 @@
  * feature.php
  */
 ?>
-<section id="feature" class="sec fea">
+<section id="feature" class="sec fea" data-hd-color>
 	<div class="fea-intro">
 	<div class="fea-intro-in">
 		<div class="fadein-wrap">

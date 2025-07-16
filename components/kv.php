@@ -4,7 +4,7 @@
  */
 ?>
 
-<div class="kv">
+<div class="kv bg-yellow" data-hd-color>
 	<div class="kv-bg mask-img is-fast">
 	<picture>
 		<source srcset="<?php imgDir(); ?>/home/kv.webp?v1.0.1" type="image/webp" media="(min-width: 768px)">

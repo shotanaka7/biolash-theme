@@ -22,10 +22,10 @@ body.home {
 
   @include mq() {
     background-color: transparent !important;
+  }
 
-    &.is-scrolled {
-      background-color: $key-yellow !important;
-    }
+  &.has-bg {
+    background-color: $key-yellow !important;
   }
 
   &.is-open {

@@ -4,7 +4,7 @@
  */
 ?>
 
-<section id="biolash" class="bl">
+<section id="biolash" class="bl bg-yellow" data-hd-color>
 	<div class="in-lg bl-in">
 	<div class="bl-img mask-img is-fast normal">
 		<picture>
@@ -20,8 +20,10 @@
 	</div>
 
 	<div class="bl-lead">
+		<div class="bl-lead-top">
 		<h2 class="bl-lead-ttl">Wラッシュブースト処方で<br>年齢まつ毛に<br class="ss">“攻めのケア<span class="qe">”</span>を。</h2>
 		<p class="txt bl-lead-txt">年齢とともに変化したまつ毛に、ハリ・コシ・ボリュームを与え目元印象をUPさせる成分を惜しみなく配合。</p>
+		</div>
 		<div class="bl-lead-img">
 		<img src="<?php imgDir(); ?>/home/feature-icon.svg?v1.0.1" alt="進化型ビオチン×補修型プロビタミン" width="565" height="227" loading="lazy">
 		</div>

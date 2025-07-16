@@ -19,6 +19,23 @@ strong {
   font-weight: 700;
 }
 
+.bg-yellow {
+  background-color: $key-yellow;
+  color: $white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: $key-yellow;
+    z-index: -1;
+  }
+}
+
 .qe {
   width: 0.5em;
   display: inline-block;

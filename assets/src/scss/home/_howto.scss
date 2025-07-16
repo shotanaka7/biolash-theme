@@ -2,12 +2,11 @@
 @use "../mixins" as *;
 
 .howto {
-  background: $key-yellow;
-  color: $white;
   padding-top: 136px;
   --slide-size: calc(216 / 353 * 100%);
   --slide-spacing: 20px;
   margin-top: 88px;
+  padding-bottom: 2px;
 
   @include mq() {
     padding-top: 96px;

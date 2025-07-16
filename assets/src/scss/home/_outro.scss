@@ -2,8 +2,6 @@
 @use "../mixins" as *;
 
 .outro {
-  background: $key-yellow;
-  color: $white;
   padding-bottom: 88px;
 
   @include mq() {

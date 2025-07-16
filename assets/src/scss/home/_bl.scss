@@ -2,9 +2,7 @@
 @use "../mixins" as *;
 
 .bl {
-  background-color: $key-yellow;
   position: relative;
-  color: $white;
 
   &-img {
     position: absolute;
@@ -62,6 +60,10 @@
       padding-bottom: 100px;
     }
 
+    @include mq(ll) {
+      padding-top: 6vh;
+    }
+
     @include mq(xl) {
       position: relative;
     }
@@ -81,6 +83,21 @@
       img {
         width: 100%;
         height: auto;
+      }
+    }
+
+    &-top {
+      @include mq() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100vh - 66vh - 100px);
+        min-height: 136px;
+      }
+
+      @include mq(ll) {
+        height: calc(100vh - 66vh - 6vh);
+        justify-content: flex-start;
       }
     }
 
@@ -118,10 +135,6 @@
     &-img {
       margin-top: 30px;
       max-width: 565px;
-
-      @include mq() {
-        margin-top: 40px;
-      }
     }
   }
 

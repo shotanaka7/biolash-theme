@@ -3,7 +3,7 @@
  * faq.php
  */
 ?>
-<section id="faq" class="faq sec">
+<section id="faq" class="faq sec bg-yellow" data-hd-color>
 	<div class="in-lg faq-in">
 	<h2 class="sec-ttl">
 		<span class="sec-ttl-en">Q&A</span>

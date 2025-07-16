@@ -3,7 +3,7 @@
  * free.php
  */
 ?>
-<section id="free" class="sec">
+<section id="free" class="sec" data-hd-color>
 	<div class="in-lg">
 	<h2 class="sec-ttl">
 		<span class="sec-ttl-en">FREE</span>

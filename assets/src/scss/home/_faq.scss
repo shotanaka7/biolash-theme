@@ -2,8 +2,6 @@
 @use "../mixins" as *;
 
 .faq {
-  background: $key-yellow;
-  color: $white;
   padding-bottom: 88px;
 
   @include mq() {

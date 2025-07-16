@@ -3,7 +3,7 @@
  * instagram.php
  */
 ?>
-<section id="instagram" class="sec ig">
+<section id="instagram" class="sec ig bg-yellow" data-hd-color>
 	<div class="in-lg ig-in">
 	<h2 class="ig-ttl">
 		<span class="ig-ttl-icon">

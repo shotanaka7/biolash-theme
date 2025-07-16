@@ -3,7 +3,7 @@
  * howto.php
  */
 ?>
-<section id="how-to-use" class="howto sec">
+<section id="how-to-use" class="howto sec bg-yellow" data-hd-color>
 	<div class="howto-in">
 	<div class="in-lg">
 		<h2 class="sec-ttl howto-ttl">
