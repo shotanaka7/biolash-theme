@@ -2,13 +2,9 @@
 @use "../mixins" as *;
 
 .kv {
-  height: 88vh;
+  height: 88svh;
   min-height: 250px;
   position: relative;
-
-  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-    height: 80vh;
-  }
 
   @include mq() {
     min-height: 300px;
