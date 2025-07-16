@@ -9,6 +9,12 @@ body.home {
   }
 }
 
+body.page {
+  .hd {
+    background: $key-yellow !important;
+  }
+}
+
 .hd {
   position: fixed;
   top: 0;
