@@ -1,8 +1,8 @@
 <div class="outro">
 	<div class="outro-kv mask-img">
 	<picture>
-		<source srcset="<?php imgDir(); ?>/home/product-kv-lg.webp" media="(min-width: 768px)" width="1442" height="791">
-		<img src="<?php imgDir(); ?>/home/product-kv-lg-sp.webp" alt="" width="354" height="396" loading="lazy">
+		<source srcset="<?php imgDir(); ?>/home/product-kv-lg.webp?v1.0.1" media="(min-width: 768px)" width="1442" height="791">
+		<img src="<?php imgDir(); ?>/home/product-kv-lg-sp.webp?v1.0.1" alt="" width="354" height="396" loading="lazy">
 	</picture>
 	</div>
 	<div class="outro-cont">

@@ -24,7 +24,7 @@
 	<div class="free-2col fadein-wrap">
 		<div class="free-2col-img">
 		<h3 class="free-2col-ttl fadein-item">色素沈着の可能性がある<br>"ビマトプロスト"不使用</h3>
-		<img src="<?php imgDir(); ?>/home/free-00.webp" alt="" width="534" height="392" loading="lazy" class="mask-img">
+		<img src="<?php imgDir(); ?>/home/free-00.webp?v1.0.1" alt="" width="534" height="392" loading="lazy" class="mask-img">
 		</div>
 		<div class="free-2col-cont">
 		<h3 class="free-2col-ttl fadein-item">色素沈着の可能性がある<br>"ビマトプロスト"不使用</h3>

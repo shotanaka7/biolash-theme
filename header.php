@@ -37,7 +37,7 @@ if ( is_home() || is_front_page() ) {
 	<div class="in-lg hd-in">
 		<div class="hd-logo">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="hd-logo-link">
-			<img src="<?php imgDir(); ?>/common/logo-wt.svg" alt="Bio Lash" class="ft-logo-img" width="224" height="40">
+			<img src="<?php imgDir(); ?>/common/logo-wt.svg?v1.0.1" alt="Bio Lash" class="ft-logo-img" width="224" height="40">
 		</a>
 		</div>
 		<button class="hd-ham">
@@ -61,18 +61,22 @@ if ( is_home() || is_front_page() ) {
 		<?php
 		if ( is_home() || is_front_page() ) :
 			?>
-		<div class="hd-btn">
+		<div class="hd-btn is-pc">
 		<a href="" class="hd-btn-link">
 			<span class="hd-btn-pc">
 			<span class="hd-btn-txt">Amazonで購入する</span>
-			</span>
-			<span class="hd-btn-sp">
-			<span class="hd-btn-icon"></span>
-			<span class="hd-btn-txt">購入する</span>
 			</span>
 		</a>
 		</div>
 		<?php endif; ?>
 	</div>
 	</header>
+	<div class="hd-btn is-sp">
+	<a href="" class="hd-btn-link">
+		<span class="hd-btn-sp">
+		<span class="hd-btn-icon"></span>
+		<span class="hd-btn-txt">購入する</span>
+		</span>
+	</a>
+	</div>
 	<main class="main">

@@ -165,7 +165,7 @@ body.home {
 
   &-btn {
     position: fixed;
-    top: 84vh;
+    bottom: 20px;
     right: 20px;
 
     @include mq() {
@@ -175,6 +175,22 @@ body.home {
 
     @include mq(ll) {
       margin-left: 44px;
+    }
+
+    &.is-pc {
+      display: none;
+
+      @include mq() {
+        display: block;
+      }
+    }
+
+    &.is-sp {
+      display: block;
+
+      @include mq() {
+        display: none;
+      }
     }
 
     &-link {

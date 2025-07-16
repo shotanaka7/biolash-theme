@@ -7,8 +7,8 @@
 <div class="kv">
 	<div class="kv-bg mask-img is-fast">
 	<picture>
-		<source srcset="<?php imgDir(); ?>/home/kv.webp" type="image/webp" media="(min-width: 768px)">
-		<img src="<?php imgDir(); ?>/home/kv-sp.webp" alt="Key Visual Background">
+		<source srcset="<?php imgDir(); ?>/home/kv.webp?v1.0.1" type="image/webp" media="(min-width: 768px)">
+		<img src="<?php imgDir(); ?>/home/kv-sp.webp?v1.0.1" alt="Key Visual Background">
 	</picture>
 	</div>
 	<div class="in-lg kv-in">
