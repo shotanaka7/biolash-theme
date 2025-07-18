@@ -7,8 +7,18 @@ global $post;
 
 if ( is_home() || is_front_page() ) {
 	$url_base = '';
+	$title    = get_bloginfo( 'name' );
+	$og_type  = 'website';
+	$og_url   = home_url( '/' );
 } else {
 	$url_base = '/';
+	$title    = get_the_title() . ' | ' . get_bloginfo( 'name' );
+	$og_type  = 'article';
+	if ( is_single() ) {
+		$og_url = get_permalink();
+	} else {
+		$og_url = home_url( '/' );
+	}
 }
 
 ?>
@@ -19,6 +29,25 @@ if ( is_home() || is_front_page() ) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><?php echo esc_html( $title ); ?></title>
+	<meta name="description" content="<?php bloginfo( 'description' ); ?>">
+	<link rel="canonical" href="<?php echo esc_url( $og_url ); ?>">
+
+	<!-- OGP -->
+	<meta property="og:title" content="<?php echo esc_html( $title ); ?>">
+	<meta property="og:description" content="<?php bloginfo( 'description' ); ?>">
+	<meta property="og:type" content="<?php echo esc_attr( $og_type ); ?>">
+	<meta property="og:url" content="<?php echo esc_url( $og_url ); ?>">
+	<meta property="og:image" content="<?php echo imgDir(); ?>/common/ogp.jpg">
+	<meta property="og:site_name" content="Bio Lash">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@BioLash">
+	<meta name="twitter:title" content="<?php echo esc_html( $title ); ?>">
+	<meta name="twitter:description" content="<?php bloginfo( 'description' ); ?>">
+	<meta name="twitter:image" content="<?php echo imgDir(); ?>/common/ogp.jpg">
+
 	<?php wp_head(); ?>
 </head>
 
@@ -37,7 +66,7 @@ if ( is_home() || is_front_page() ) {
 	<div class="in-lg hd-in">
 		<div class="hd-logo">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="hd-logo-link">
-			<img src="<?php imgDir(); ?>/common/logo-wt.svg?v1.0.1" alt="Bio Lash" class="ft-logo-img" width="224" height="40">
+			<img src="<?php echo imgDir(); ?>/common/logo-wt.svg?v1.0.1" alt="Bio Lash" class="ft-logo-img" width="224" height="40">
 		</a>
 		</div>
 		<button class="hd-ham">
@@ -62,7 +91,7 @@ if ( is_home() || is_front_page() ) {
 		if ( is_home() || is_front_page() ) :
 			?>
 		<div class="hd-btn is-pc">
-		<a href="" class="hd-btn-link">
+		<a href="<?php echo amazonLink(); ?>" class="hd-btn-link" target="_blank" rel="noopener noreferrer">
 			<span class="hd-btn-pc">
 			<span class="hd-btn-txt">Amazonで購入する</span>
 			</span>
@@ -72,7 +101,7 @@ if ( is_home() || is_front_page() ) {
 	</div>
 	</header>
 	<div class="hd-btn is-sp">
-	<a href="" class="hd-btn-link">
+	<a href="<?php echo amazonLink(); ?>" class="hd-btn-link" target="_blank" rel="noopener noreferrer">
 		<span class="hd-btn-sp">
 		<span class="hd-btn-icon"></span>
 		<span class="hd-btn-txt">購入する</span>

@@ -45,6 +45,14 @@ add_action( 'wp_enqueue_scripts', 'biolash_enqueue_scripts' );
 // 画像ディレクトリのパスを取得する関数
 if ( ! function_exists( 'imgDir' ) ) {
 	function imgDir() {
-		echo get_template_directory_uri() . '/assets/img';
+		return esc_url( get_template_directory_uri() . '/assets/img' );
+	}
+}
+
+// 購入リンクURLを取得する関数（AMAZON）
+if ( ! function_exists( 'amazonLink' ) ) {
+	function amazonLink() {
+		$purchase_url = 'https://www.amazon.co.jp/dp/B0FD7LFZP9';
+		return esc_url( $purchase_url );
 	}
 }

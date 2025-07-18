@@ -14,7 +14,7 @@
 
 		<div class="fea-intro-2col">
 		<div class="fea-intro-img mask-img">
-			<img src="<?php imgDir(); ?>/home/feature-00.webp?v1.0.1" alt="Feature Image" width="534" height="313" loading="lazy">
+			<img src="<?php echo imgDir(); ?>/home/feature-00.webp?v1.0.1" alt="Feature Image" width="534" height="313" loading="lazy">
 		</div>
 		<ul class="check-list fadein-wrap">
 			<li class="check-item txt fadein-item">ボリュームの減少</li>
@@ -62,8 +62,8 @@
 			<h3 class="fea-comp-item-ttl fadein-item">塗布前</h3>
 			<div class="fea-comp-item-img">
 			<picture>
-				<source srcset="<?php imgDir(); ?>/home/before.webp?v1.0.1" type="image/webp" media="(min-width: 768px)" width="482" height="393">
-				<img src="<?php imgDir(); ?>/home/before-sp.webp?v1.0.1" alt="" width="353" height="199" loading="lazy" class="mask-img">
+				<source srcset="<?php echo imgDir(); ?>/home/before.webp?v1.0.1" type="image/webp" media="(min-width: 768px)" width="482" height="393">
+				<img src="<?php echo imgDir(); ?>/home/before-sp.webp?v1.0.1" alt="" width="353" height="199" loading="lazy" class="mask-img" alt="塗布前のまつ毛のキューティクルの状態">
 			</picture>
 			</div>
 			<p class="txt fea-comp-item-txt fadein-item">ダメージによりキューティクルがめくれ上がっている</p>
@@ -72,11 +72,11 @@
 			<h3 class="fea-comp-item-ttl fadein-item">Bio Lash 5日間塗布後</h3>
 			<div class="fea-comp-item-img">
 			<picture>
-				<source srcset="<?php imgDir(); ?>/home/after.webp?v1.0.1" type="image/webp" media="(min-width: 768px)" width="482" height="393">
-				<img src="<?php imgDir(); ?>/home/after-sp.webp?v1.0.1" alt="" width="353" height="199" loading="lazy" class="mask-img">
+				<source srcset="<?php echo imgDir(); ?>/home/after.webp?v1.0.1" type="image/webp" media="(min-width: 768px)" width="482" height="393">
+				<img src="<?php echo imgDir(); ?>/home/after-sp.webp?v1.0.1" alt="" width="353" height="199" loading="lazy" class="mask-img" alt="BioLash5日間塗布後のまつ毛のキューティクルの状態">
 			</picture>
 			<div class="fea-comp-item-img-bubble mask-img">
-				<img src="<?php imgDir(); ?>/home/after-bubble.svg?v1.0.1" alt="美容液を塗布することでキューティクルが整いダメージを受けにくいまつ毛に！" width="239" height="239" loading="lazy">
+				<img src="<?php echo imgDir(); ?>/home/after-bubble.svg?v1.0.1" alt="美容液を塗布することでキューティクルが整いダメージを受けにくいまつ毛に！" width="239" height="239" loading="lazy">
 			</div>
 			</div>
 			<p class="txt fea-comp-item-txt fadein-item">キューティクルが整いめくれが目立たない状態に</p>

@@ -9,7 +9,7 @@
 	<div class="ft-top">
 		<div class="ft-logo">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="ft-logo-link hov-fade">
-			<img src="<?php imgDir(); ?>/common/logo-bk.svg?v1.0.1" alt="Bio Lash" class="ft-logo-img" width="224" height="40">
+			<img src="<?php echo imgDir(); ?>/common/logo-bk.svg?v1.0.1" alt="Bio Lash" class="ft-logo-img" width="224" height="40">
 		</a>
 		</div>
 		<nav class="ft-nav">

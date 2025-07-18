@@ -7,7 +7,7 @@
 	<div class="in-lg ig-in">
 	<h2 class="ig-ttl">
 		<span class="ig-ttl-icon">
-		<img src="<?php imgDir(); ?>/common/icon-ig.svg?v1.0.1" alt="Instagram" width="60" height="60" loading="lazy">
+		<img src="<?php echo imgDir(); ?>/common/icon-ig.svg?v1.0.1" alt="Instagram" width="60" height="60" loading="lazy">
 		</span>
 		<span class="ig-ttl-txt">INSTAGRAM</span>
 	</h2>
